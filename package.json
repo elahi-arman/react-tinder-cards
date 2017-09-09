@@ -1,0 +1,44 @@
+{
+  "name": "react-tinder-cards",
+  "version": "0.0.1",
+  "description": "Starter Module for React Components with Sass Transforms",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack -d --watch",
+    "build": "webpack -p",
+    "test": "tap app/**/*.test.js",
+    "test:babel": "babel app/**/*.test.es6 -d .",
+    "testCI": "npm test | faucet && npm run testCoverage",
+    "testCoverage": "nyc --clean --babel-cache npm test && nyc report"
+  },
+  "author": "Arman Elahi",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "styled-components": "^2.1.2"
+  },
+  "nyc": {
+    "require": [
+      "babel-register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-plugin-istanbul": "^4.1.4",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "enzyme": "^2.9.1",
+    "faucet": "0.0.1",
+    "ignore-loader": "^0.1.2",
+    "nyc": "^11.1.0",
+    "react-test-renderer": "^15.6.1",
+    "tap": "^10.7.0",
+    "webpack": "^2.2.1"
+  }
+}
